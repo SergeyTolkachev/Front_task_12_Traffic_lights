@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@-webkit-keyframes redLight {
+  0%, 50% {
+    background-color: red;
+  }
+  51%, 100% {
+    background-color: grey;
+  }
+}
+
+@keyframes redLight {
+  0%, 50% {
+    background-color: red;
+  }
+  51%, 100% {
+    background-color: grey;
+  }
+}
+@-webkit-keyframes yellowLight {
+  0%, 24%, 51%, 72%, 100% {
+    background-color: grey;
+  }
+  25%, 50%, 73%, 99% {
+    background-color: yellow;
+  }
+}
+@keyframes yellowLight {
+  0%, 24%, 51%, 72%, 100% {
+    background-color: grey;
+  }
+  25%, 50%, 73%, 99% {
+    background-color: yellow;
+  }
+}
+@-webkit-keyframes greenLight {
+  0%, 50%, 73%, 74%, 87%, 88%, 100% {
+    background-color: grey;
+  }
+  51%, 72%, 75%, 86%, 89%, 99% {
+    background-color: green;
+  }
+}
+@keyframes greenLight {
+  0%, 50%, 73%, 74%, 87%, 88%, 100% {
+    background-color: grey;
+  }
+  51%, 72%, 75%, 86%, 89%, 99% {
+    background-color: green;
+  }
+}
+.trafficLights__green, .trafficLights__yellow, .trafficLights__red {
+  background-color: grey;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-top: 17%;
+  margin-left: 40px;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+body {
+  font-family: "Robot Mono", monospace;
+  margin: 0;
+  background-color: black;
+  font-size: 24px;
+}
+
+#wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 80vw;
+  background-color: #df9203;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.trafficLights {
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  background-color: black;
+  margin-left: calc(50% - 100px);
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.trafficLights__red {
+  -webkit-animation-name: redLight;
+          animation-name: redLight;
+}
+.trafficLights__yellow {
+  -webkit-animation-name: yellowLight;
+          animation-name: yellowLight;
+}
+.trafficLights__green {
+  -webkit-animation-name: greenLight;
+          animation-name: greenLight;
+}
+
+.pillar {
+  width: 50px;
+  height: 108px;
+  background-color: black;
+  position: absolute;
+  margin-left: calc(50% - 25px);
+  margin-top: 549px;
+}/*# sourceMappingURL=main.css.map */

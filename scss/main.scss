@@ -1,0 +1,94 @@
+$duration: 15s;
+
+@import 'reset';
+
+@keyframes redLight {
+    0%, 50% {
+        background-color: red;
+    }
+    51%, 100% {
+        background-color: grey;
+    }
+}
+
+@keyframes yellowLight {
+    0%, 24%, 51%, 72%, 100% {
+        background-color: grey;
+    }
+    25%, 50%, 73%, 99% {
+        background-color: yellow;
+    }
+}
+
+@keyframes greenLight {
+    0%, 50%, 73%, 74%, 87%, 88%, 100% {
+        background-color: grey;
+    }
+    51%, 72%, 75%, 86%, 89%, 99% {
+        background-color: green;
+    }
+}
+
+%forLights {
+    background-color: grey;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: 17%;
+    margin-left: 40px;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+}
+
+body {
+    font-family: 'Robot Mono', monospace;
+    margin: 0;
+    background-color: black;
+    font-size: 24px;
+}
+
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 80vw;
+    background-color:rgb(223, 146, 3);
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.trafficLights {
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    background-color: black;
+    margin-left: calc(50% - 100px);
+    margin-top: 50px;
+    border-radius: 20px;
+    &__red {
+        animation-name: redLight;
+        @extend %forLights;
+    }
+    &__yellow {
+        animation-name: yellowLight;
+        @extend %forLights;
+    }
+    &__green {
+        animation-name: greenLight;
+        @extend %forLights;
+    }
+}
+
+.pillar {
+    width: 50px;
+    height: 108px;
+    background-color: black;
+    position: absolute;
+    margin-left: calc(50% - 25px);
+    margin-top: 549px;
+}
+
+
